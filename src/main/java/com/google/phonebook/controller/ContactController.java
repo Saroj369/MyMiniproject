@@ -29,6 +29,11 @@ public class ContactController {
 
 	private ContactService contactService;
 	
+	@GetMapping("/helloworld")
+	public String helloWorld() {
+		return "Hello world";
+	}
+	
 	// using ResponsEntity we can send response to client with status code.
 	@PostMapping
 	public ResponseEntity<String> saveContact(@RequestBody Contact contact){
